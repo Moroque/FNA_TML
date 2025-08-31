@@ -1,14 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{35253CE1-C864-4CD3-8249-4D1319748E8F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
     <AssemblyName>FNA</AssemblyName>
+    <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>True</DebugSymbols>
@@ -207,6 +208,7 @@
     <Compile Include="src\FNAPlatform\FNAPlatform.cs" />
     <Compile Include="src\FNAPlatform\FNAWindow.cs" />
     <Compile Include="src\FNAPlatform\SDL2_FNAPlatform.cs" />
+    <Compile Include="src\FNAPlatform\SDL3_FNAPlatform.cs" />
     <Compile Include="src\FrameworkDispatcher.cs" />
     <Compile Include="src\Game.cs" />
     <Compile Include="src\GameComponent.cs" />
@@ -248,7 +250,6 @@
     <Compile Include="src\Graphics\Effect\StockEffects\EnvironmentMapEffect.cs" />
     <Compile Include="src\Graphics\Effect\StockEffects\SkinnedEffect.cs" />
     <Compile Include="src\Graphics\Effect\StockEffects\SpriteEffect.cs" />
-    <Compile Include="src\Graphics\FNA3D_SafeAccess.cs" />
     <Compile Include="src\Graphics\FNA3D.cs" />
     <Compile Include="src\Graphics\GraphicsAdapter.cs" />
     <Compile Include="src\Graphics\GraphicsDevice.cs" />
@@ -375,9 +376,24 @@
     <Compile Include="src\LaunchParameters.cs" />
     <Compile Include="src\MathHelper.cs" />
     <Compile Include="src\Matrix.cs" />
+    <Compile Include="src\Media\Album.cs" />
+    <Compile Include="src\Media\AlbumCollection.cs" />
+    <Compile Include="src\Media\Artist.cs" />
+    <Compile Include="src\Media\ArtistCollection.cs" />
+    <Compile Include="src\Media\Genre.cs" />
+    <Compile Include="src\Media\GenreCollection.cs" />
+    <Compile Include="src\Media\MediaLibrary.cs" />
     <Compile Include="src\Media\MediaPlayer.cs" />
     <Compile Include="src\Media\MediaQueue.cs" />
+    <Compile Include="src\Media\MediaSource.cs" />
+    <Compile Include="src\Media\MediaSourceType.cs" />
     <Compile Include="src\Media\MediaState.cs" />
+    <Compile Include="src\Media\Picture.cs" />
+    <Compile Include="src\Media\PictureAlbum.cs" />
+    <Compile Include="src\Media\PictureAlbumCollection.cs" />
+    <Compile Include="src\Media\PictureCollection.cs" />
+    <Compile Include="src\Media\Playlist.cs" />
+    <Compile Include="src\Media\PlaylistCollection.cs" />
     <Compile Include="src\Media\Song.cs" />
     <Compile Include="src\Media\SongCollection.cs" />
     <Compile Include="src\Media\VideoSoundtrackType.cs" />
@@ -409,6 +425,7 @@
     <Compile Include="src\Vector3.cs" />
     <Compile Include="src\Vector4.cs" />
     <Compile Include="lib\SDL2-CS\src\SDL2.cs" />
+    <Compile Include="lib\SDL3-CS\SDL3\SDL3.Legacy.cs" />
     <Compile Include="lib\FAudio\csharp\FAudio.cs" />
     <Compile Include="lib\Theorafile\csharp\Theorafile.cs" />
   </ItemGroup>
